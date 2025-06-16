@@ -11,11 +11,8 @@ app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<LoggingMiddleware>();
 app.UseMiddleware<AuthenticationMiddleware>();
 
-if (app.Environment.IsDevelopment())
-{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
